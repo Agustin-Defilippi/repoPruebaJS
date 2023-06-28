@@ -3,10 +3,10 @@ const excursiones = document.getElementById("excursiones");
 
 const renderTiendaExcursiones = () =>{
     const PaqueteExcursiones = PaqueteExcursion;
-    let salidaExcursiones="";
+    
     PaqueteExcursiones.forEach(items => {
-        salidaExcursiones+= 
-        `<div class="d-flex excursionesTienda ">
+        const cardExcursiones = document.createElement("div");
+        cardExcursiones.innerHTML=`<div class="d-flex excursionesTienda ">
                 <div class="card  css-pFiltrado card-excursiones text-ligth" style="width: 18rem;">
                     <img src="${items.img}" class="card-img-top" alt="${items.destino}">
                     <div class="card-body text-center">
@@ -16,38 +16,45 @@ const renderTiendaExcursiones = () =>{
                         <b>Precio</b>: <b>$${items.precio}</b>
                         </p>
                     </div>
-                 
+                    <div class="w-100 d-flex justify-content-center">
+                        <button id="${items.id}"type="submit" class="btn bg-btn">MÁS INFO</button>
+                    </div>
                 </div>
         </div>`;
-        
-       
-    });
 
-    excursiones.innerHTML = salidaExcursiones;
+       excursiones.appendChild(cardExcursiones); 
+       const btnMasInfo = document.getElementById(`${items.id}`);
+       btnMasInfo.addEventListener("click",() =>{
+            Swal.fire({
+            title: `${items.nombre}`,
+            text: `(${items.destino})`,
+            imageUrl: `${items.img}`,
+            background:"black",
+            color:"white",
+            html:` ${items.destino}  <br><br> ${items.descripcion}`,
+            imageWidth: 400,
+            imageHeight: 400,
+            imageAlt:`${items.nombre}`,
+            showCancelButton: true,
+            confirmButtonText: 'Agregar al carrito',
+            customClass:{
+                confirmButton:'swalBtnColor'
+            },
+            denyButtonText:"Cancelar",
+            cancelButtonText: `cancelar`,
+            }).then((result) => {
+            
+            if (result.isConfirmed) {
+                Swal.fire('Agregado al carrito!', '', 'success');
+            }
+            })
+       })
+
+    });
 }
 
 renderTiendaExcursiones();
 
-const mostrarProductos = () => {
-   const pepe = renderTiendaExcursiones();
-
-    const contenedor = document.getElementById("contenedor");
-
-    pepe.forEach((items) => {
-        contenedor.innerHTML += `
-        <button id="${items.id}">Enviar</button>  
-    `;
-    });
-    pepe.forEach((items) => {
-        const boton = getElementById(items.id);
-        boton.addEventListener("click", () => {
-             
-            Swal.fire('Any fool can use a computer')
-        });
-    });
-};
-
-mostrarProductos()
 
 
 

@@ -149,7 +149,7 @@ const tiendaExcursiones = [
         nombre:"Ushuaia City Tour",
         destino:"ushuaia",
         precio:47200,
-        img:"../img/ushuaia.jpg",
+        img:"../img/ushuaia.png",
         descripcion:"El City Tour por Ushuaia es la primera excursión que realizan los turistas en la capital de la provincia de Tierra del Fuego. Consiste en un paseo en el que los visitantes pueden conocer los rincones más emblemáticos de la Ciudad del Fin del Mundo.  Regreso al hotel por cuenta de los pax o con costo adicional.",
         fichaTecnica:`Opera: Todo el año.
         Duración:  1 horas aproximadamente.
@@ -190,10 +190,8 @@ const tiendaExcursiones = [
         precio:47500,
         img:"../img/chaltten.jpg",
         descripcion:`Daremos inicio a nuestra actividad con la recogida por los hoteles a partir de las 06:00 AM.( En los meses de Junio y Julio la salida sera a las 07:00 AM.) Seguidamente tomaremos la mítica Ruta 40 bordeando el Lago Argentino y emprenderemos viaje hacia el pueblo de El Chaltén a 220 km de El Calafate. Una vez en el Chaltén.<br>
-        Te ofrecemos la mejor manera de conocer Laguna de los Tres en el día desde El Calafate.<br>Durante la época invernal, el principal paisaje es la nieve. Te facilitamos crampones y bastones para que puedas caminar con seguridad.
-        El transfer los esperará para que puedan realizar el Sendero del Fitz Roy desde El Chaltén, un recorrido de 20 kilómetros que se hace en aproximadamente 9/10 horas de trekking, con 1200 metros de altimetría acumulada.
-        Los primeros 4 kilómetros serán para entrar en calor, con una increíble vista del Valle del Río de las Vueltas, atravesando bosques y arroyos, hasta encontrarse con Laguna Capri.
-        Luego continuarán por el mismo Sendero hasta el km8, donde se encontrarán el Camping Poincenot y el Rio Blanco.`,
+        Durante la época invernal, el principal paisaje es la nieve. Te facilitamos crampones y bastones para que puedas caminar con seguridad.
+        El transfer los esperará para que puedan realizar el Sendero del Fitz Roy desde El Chaltén, un recorrido de 20 kilómetros que se hace en aproximadamente 9/10 horas de trekking, con 1200 metros de altimetría acumulada.`,
         fichaTecnica:`Una botella de agua fría.<br>
         Snack (turrones o barritas de cereal).<br>
         Un termo con un té caliente.<br>
